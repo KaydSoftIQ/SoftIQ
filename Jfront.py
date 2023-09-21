@@ -1,6 +1,12 @@
 import turtle
 from softiqbackend import*
 
+<<<<<<< HEAD
+=======
+# Test
+# testing if just been pushed and pull
+
+>>>>>>> 3b17b2c1600e3a2e39d9b5d7cec977a5b2d723f9
 t = turtle.Turtle()
 
 while True:
