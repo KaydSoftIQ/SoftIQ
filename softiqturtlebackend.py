@@ -26,7 +26,7 @@ def drawBar(t, height, color):
 
 xs = [48, 56, 45]
 clrs = ["pink",  "blue", "magenta", ]
-
+# Test
 maxheight = max(xs)
 numbers = len(xs)
 border = 110
