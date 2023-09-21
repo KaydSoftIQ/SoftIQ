@@ -12,6 +12,11 @@ gender_number = 0
 
 class database:
 
+    def __init__(self):
+        self.data = []
+
+
+
     """ 
     def backend_drawing(t, dc):
         TurtleDrawing.graph(t)
@@ -25,174 +30,50 @@ class database:
             print("Not a valid category.")
     """
 
-    def inputed_data(t, n, a, h, s, r):
-        print("Data Stored")
+    def add_data(self, n, a, h, s, r):
+        # [name 0, age 1, hair 2, sex 3, role 4]
+        self.data.append([n, a, h, s, r])
 
-    def select_data(t, d):
-
-        hcolour_number = 0
-        gender_number = 0
-
-        # to count the number of items in the hair colour section
-
-        # searches each list to find if the given hair colour is present
-        # if the hair colour is in the list then a count is summed to find how many of the same hair colour is in all the lists
-        if d == "Ginger":
-            if d == p1[2]:
-                hcolour_number += 1
-            if d == p2[2]:
-                hcolour_number += 1
-            if d == p3[2]:
-                hcolour_number += 1
-            if d == p4[2]:
-                hcolour_number += 1
-            if d == p5[2]:
-                hcolour_number += 1
-            if d == p6[2]:
-                hcolour_number += 1
-            if d == p7[2]:
-                hcolour_number += 1
-            if d == p8[2]:
-                hcolour_number += 1
-            if d == p9[2]:
-                hcolour_number += 1
-            if d == p10[2]:
-                hcolour_number += 1
-            print(hcolour_number)
-
-        elif d == "Brown":
-            if d == p1[2]:
-                hcolour_number += 1
-            if d == p2[2]:
-                hcolour_number += 1
-            if d == p3[2]:
-                hcolour_number += 1
-            if d == p4[2]:
-                hcolour_number += 1
-            if d == p5[2]:
-                hcolour_number += 1
-            if d == p6[2]:
-                hcolour_number += 1
-            if d == p7[2]:
-                hcolour_number += 1
-            if d == p8[2]:
-                hcolour_number += 1
-            if d == p9[2]:
-                hcolour_number += 1
-            if d == p10[2]:
-                hcolour_number += 1
-            print(hcolour_number)
-
-        elif d == "Blond":
-            if d == p1[2]:
-                hcolour_number += 1
-            if d == p2[2]:
-                hcolour_number += 1
-            if d == p3[2]:
-                hcolour_number += 1
-            if d == p4[2]:
-                hcolour_number += 1
-            if d == p5[2]:
-                hcolour_number += 1
-            if d == p6[2]:
-                hcolour_number += 1
-            if d == p7[2]:
-                hcolour_number += 1
-            if d == p8[2]:
-                hcolour_number += 1
-            if d == p9[2]:
-                hcolour_number += 1
-            if d == p10[2]:
-                hcolour_number += 1
-            print(hcolour_number)
-
-        elif d == "Black":
-            if d == p1[2]:
-                hcolour_number += 1
-            if d == p2[2]:
-                hcolour_number += 1
-            if d == p3[2]:
-                hcolour_number += 1
-            if d == p4[2]:
-                hcolour_number += 1
-            if d == p5[2]:
-                hcolour_number += 1
-            if d == p6[2]:
-                hcolour_number += 1
-            if d == p7[2]:
-                hcolour_number += 1
-            if d == p8[2]:
-                hcolour_number += 1
-            if d == p9[2]:
-                hcolour_number += 1
-            if d == p10[2]:
-                hcolour_number += 1
-            print(hcolour_number)
-        else:
-            print("That is not an option.")
-
-        # to count the number of items in the hair colour section
-
-        # searches each list to find out if there is a specific gender in that list
-        # if there is then it will sum it up
-        if d == "Female":
-            if d == p1[3]:
-                gender_number += 1
-            if d == p2[3]:
-                gender_number += 1
-            if d == p3[3]:
-                gender_number += 1
-            if d == p4[3]:
-                gender_number += 1
-            if d == p5[3]:
-                gender_number += 1
-            if d == p6[3]:
-                gender_number += 1
-            if d == p7[3]:
-                gender_number += 1
-            if d == p8[3]:
-                gender_number += 1
-            if d == p9[3]:
-                gender_number += 1
-            if d == p10[3]:
-                gender_number += 1
-            print(gender_number)
-
-        elif d == "Male":
-            if d == p1[3]:
-                gender_number += 1
-            if d == p2[3]:
-                gender_number += 1
-            if d == p3[3]:
-                gender_number += 1
-            if d == p4[3]:
-                gender_number += 1
-            if d == p5[3]:
-                gender_number += 1
-            if d == p6[3]:
-                gender_number += 1
-            if d == p7[3]:
-                gender_number += 1
-            if d == p8[3]:
-                gender_number += 1
-            if d == p9[3]:
-                gender_number += 1
-            if d == p10[3]:
-                gender_number += 1
-            print(gender_number)
+    def select_data(self, t):
+        o = []
+        if t == "name":
+            for i in self.data:
+                o.append(i[0])
+        elif t == "age":
+            for i in self.data:
+                o.append(i[1])
+        elif t == "hair":
+            for i in self.data:
+                o.append(i[2])
+        elif t == "sex":
+            for i in self.data:
+                o.append(i[3])
+        elif t == "role":
+            for i in self.data:
+                o.append(i[4])
+        
+        return o
+    
 
 
-#     Name         Age      HC           Gender       Role
-p1 = ["Sarah",     "16",    "Ginger",    "Female",    "W"]
-p2 = ["Joao",      "19",    "Brown",     "Male",      "L"]
-p3 = ["Oliver",    "34",    "Brown",     "Male",      "W"]
-p4 = ["Dan",       "11",    "Ginger",    "Male",    "L"]
-p5 = ["Luke",      "29",    "Blond",     "Male",      "L"]
-p6 = ["John",      "35",    "Brown",     "Male",      "W"]
-p7 = ["Sara",      "66",    "Black",     "Female",    "L"]
-p8 = ["Melody",    "16",    "Black",     "Female",    "W"]
-p9 = ["Brian",     "24",    "Blond",     "Male",      "W"]
-p10 = ["Shaniqua", "65",    "Ginger",    "Female",    "L"]
+    def collect_data(display_data):
+        if display_data == "name":
+            print(test.select_data("name"))
+        elif display_data == "age":
+            print(test.select_data("age"))
+        elif display_data == "hair":
+            print(test.select_data("hair"))
+        elif display_data == "sex":
+            print(test.select_data("sex"))
+        elif display_data == "role":
+            print(test.select_data("role"))
+        
 
 
 
+
+test = database()
+test.add_data("Oliver",16,"Brown","Male","Programmer")
+test.add_data("Joao",16,"Brown","Male","Programmer")
+#print(test.select_data("name"))
+       
