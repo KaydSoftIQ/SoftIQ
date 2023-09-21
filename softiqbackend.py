@@ -1,4 +1,3 @@
-import turtle
 #from softiqturtlebackend import *
 
 
@@ -14,8 +13,6 @@ class database:
 
     def __init__(self):
         self.data = []
-
-
 
     """ 
     def backend_drawing(t, dc):
@@ -75,5 +72,4 @@ class database:
 test = database()
 test.add_data("Oliver",16,"Brown","Male","Programmer")
 test.add_data("Joao",16,"Brown","Male","Programmer")
-#print(test.select_data("name"))
        

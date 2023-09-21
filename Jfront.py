@@ -1,7 +1,5 @@
 from softiqbackend import*
 
-t = turtle.Turtle()
-
 while True:
     action = 0
     print("\n1. To enter new data", "\n2. To display the data","\n3. To exit the program")
@@ -12,7 +10,7 @@ while True:
         hair = input("Hair Colour: ")
         sex = input("Sex (Male/Female): ")
         role = input("Role: ")
-        database.inputed_data(name, age, hair, sex, role)
+        database.add_data(name, age, hair, sex, role)
     elif action == 2:
         #print("\nYour can select from:", "\n1. Hair Colour", "\n2. Sex")
         # display_category = input("Category: ")
