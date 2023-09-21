@@ -10,6 +10,7 @@ r = input(str("Role"))
 '''
 
 
+# Jacob's Notes -- Why are we using an input function in the backend? This is frontend code; we have the debug section down the bottom for a reason
 k = input("Action: ")
 
 if k == "Age":
@@ -19,7 +20,7 @@ else:
 
 
 
-
+# Jacob's Notes -- This won't work when imported; the variable 'test' only exists in the debug section of this program. Also, why is this needed when count_data exists?
 class CollectingData:
 
     def collecting(k,i):
@@ -46,11 +47,11 @@ class DataTable:
         return c
 
         
-
-test = DataTable()
-test.insert_data("Joao", Age=16, HairColour="Black", Sex="Male", Role="Programmer")
-test.insert_data("Oliver", Age=16, HairColour="Brown", Sex="Male", Role="Programmer")
-test.insert_data("KayD", Age=19, HairColour="Black", Sex="Female", Role="Musician")
-#test.insert_data(n, Age=a, Haircolour=hc, Sex=s, Role=r)
-CollectingData.collecting(k,i)
-#print(test.count_data("Age",16))
+if __name__ == "__main__": # Jacob's Notes -- Added this line; makes it so this area is debug only (won't run if someone imports it)
+    test = DataTable()
+    test.insert_data("Joao", Age=16, HairColour="Black", Sex="Male", Role="Programmer")
+    test.insert_data("Oliver", Age=16, HairColour="Brown", Sex="Male", Role="Programmer")
+    test.insert_data("KayD", Age=19, HairColour="Black", Sex="Female", Role="Musician")
+    #test.insert_data(n, Age=a, Haircolour=hc, Sex=s, Role=r)
+    CollectingData.collecting(k,i)
+    #print(test.count_data("Age",16))
