@@ -6,7 +6,7 @@ while True:
     action = int(input("Enter a number: "))
     if action == 1:
         name = input("Name: ")
-        age = input("Age: ")
+        age = int(input("Age: "))
         hair = input("Hair Colour: ")
         sex = input("Sex (Male/Female): ")
         role = input("Role: ")
