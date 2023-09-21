@@ -23,28 +23,48 @@ while True:
     else:
         pass
 '''
+#This is used for the frontend
+'''
+k = input("Action: ")
 
-while True:
-    print("\n1. To enter new data")
-    print("2. To display the data")
-    print("3. To exit the program")
+if k == "Age":
+    i = int(input("Age: "))
+else:
+    i = input(":")
+'''
 
-    action = input("Enter a number: ")
 
-    if action == '1':
-        name = input("Name: ")
-        age = input("Age: ")
-        hair = input("Hair Colour: ")
-        sex = input("Sex (Male/Female): ")
-        role = input("Role: ")
+
+class CollectingData:
+
+    def collecting(k,i):
+        print(test.count_data(k,i))
+
+
+
+class DataTable:
+
+    def __init__(self):
+        self.data = {}
         
 
-    elif action == '2':
+    def insert_data(self, name, **kwargs):
+        self.data[name] = kwargs
+        self.data[name]["Name"] = name
+
+    def count_data(self, data, value):
+        c=0
+
+        for i in self.data:
+            if self.data[i][data] == value:
+                c += 1
+        return c
+
         
-        t = turtle.Turtle()
 
-        display_data = input("What do you want to select? ")
-        t.bye()
-
-    elif action == '3':
-        break
+test = DataTable()
+test.insert_data("Joao", Age=16, HairColour="Black", Sex="Male", Role="Programmer")
+test.insert_data("Oliver", Age=16, HairColour="Brown", Sex="Male", Role="Programmer")
+test.insert_data("KayD", Age=19, HairColour="Black", Sex="Female", Role="Musician")
+CollectingData.collecting(k,i)
+#print(test.count_data("Age",16))
