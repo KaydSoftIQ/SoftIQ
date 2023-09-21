@@ -29,9 +29,8 @@ We welcome contributions from the community! If you'd like to contribute to this
 
 ## License
 
-[Insert License Information Here]
+- [Lcense](https://github.com/KaydSoftIQ/SoftIQ/blob/main/LICENCE)
 
-[Include any license information or links to the license file.]
 
 ## GitHub Repository
 
