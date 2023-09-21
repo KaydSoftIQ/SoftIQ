@@ -67,7 +67,7 @@ class database:
             print(test.select_data("sex"))
         elif display_data == "role":
             print(test.select_data("role"))
-        
+    
 
 
 

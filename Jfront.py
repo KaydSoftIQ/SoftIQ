@@ -1,4 +1,3 @@
-import turtle
 from softiqbackend import*
 
 t = turtle.Turtle()
@@ -13,13 +12,13 @@ while True:
         hair = input("Hair Colour: ")
         sex = input("Sex (Male/Female): ")
         role = input("Role: ")
-        database.inputed_data(t, name, age, hair, sex, role)
+        database.inputed_data(name, age, hair, sex, role)
     elif action == 2:
-        print("\nYour can select from:", "\n1. Hair Colour", "\n2. Sex")
-         # display_category = input("Category: ")
+        #print("\nYour can select from:", "\n1. Hair Colour", "\n2. Sex")
+        # display_category = input("Category: ")
         # database.backend_drawing(t, display_category)
         display_data = input("What do you want to select? ")
-        database.select_data(t, display_data)
+        database.collect_data(display_data)
     elif action == 3:
         break
     else:
