@@ -1,13 +1,22 @@
 
 #This is used for the frontend
+
 '''
+n = input(str("Name:"))
+a = int(input("Age:"))
+hc = input(str("Haircolour"))
+s = input(str("Sex:"))
+r = input(str("Role"))
+'''
+
+
 k = input("Action: ")
 
 if k == "Age":
     i = int(input("Age: "))
 else:
-    i = input(":")
-'''
+    i = input(k+":")
+
 
 
 
@@ -42,5 +51,6 @@ test = DataTable()
 test.insert_data("Joao", Age=16, HairColour="Black", Sex="Male", Role="Programmer")
 test.insert_data("Oliver", Age=16, HairColour="Brown", Sex="Male", Role="Programmer")
 test.insert_data("KayD", Age=19, HairColour="Black", Sex="Female", Role="Musician")
+#test.insert_data(n, Age=a, Haircolour=hc, Sex=s, Role=r)
 CollectingData.collecting(k,i)
 #print(test.count_data("Age",16))
