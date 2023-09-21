@@ -1,5 +1,5 @@
 import turtle
-from softiqbackendturtle import *
+#from softiqturtlebackend import *
 
 
 ginger_hcolour_number = 0
@@ -26,11 +26,7 @@ class database:
     """
 
     def inputed_data(t, n, a, h, s, r):
-        print(n)
-        print(a)
-        print(h)
-        print(s)
-        print(r)
+        print("Data Stored")
 
     def select_data(t, d):
 
