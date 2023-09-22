@@ -1,5 +1,6 @@
 from softiqbackend import*
 from softiqturtlebackend import *
+'''
 
 while True:
     action = 0
@@ -31,7 +32,24 @@ if k == "Age":
     i = int(input("Age: "))
 else:
     i = input(":")
+'''
 
+while True:
+    action = 0
+    print("\n 1) To enter data. \n 2) To display data. \n 3) Exit")
+    action = int(input("Enter a number: "))
 
+    if action == 1:
+        print("Enter Data")
+    elif action== 2:
+        print("Display Data")
 
+    elif action== 3:
+        break
+    else:
+        pass
+
+    
+
+        
 
