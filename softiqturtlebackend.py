@@ -145,13 +145,32 @@ width = (25)
 height = (50)
 
 def draw_chart():
-	t.forward(500)
-	t.home()
 	t.left(90)
 	t.forward(500)
+	t.backward(500)
+	t.right(90)
+	t.forward(500)
+	t.backward(500)
 	
 def first_bar():
-	t.home()
+	t.forward(50)
+	t.left(90)
+	t.forward(height)
+	t.right(90)
+	t.forward(width)
+	t.right(90)
+	t.forward(height)
+
+	t.left(90)
+	t.forward(50)
+	t.left(90)
+	t.forward(height)
+	t.right(90)
+	t.forward(width)
+	t.right(90)
+	t.forward(height)
+
+	t.left(90)
 	t.forward(50)
 	t.left(90)
 	t.forward(height)
@@ -160,5 +179,10 @@ def first_bar():
 	t.right(90)
 	t.forward(height)
 	
+t.penup()
+t.goto(-200, -200)
+t.pendown()
+
+
 draw_chart()
 first_bar()
