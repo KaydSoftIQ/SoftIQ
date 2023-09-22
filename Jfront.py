@@ -40,10 +40,20 @@ while True:
     action = int(input("Enter a number: "))
 
     if action == 1:
-        print("Enter Data")
+        name = input("Name: ")
+        age = int(input("Age: "))
+        hair = input("Hair Colour: ")
+        sex = input("Sex (Male/Female): ")
+        role = input("Role: ")
+    
     elif action== 2:
         print("Display Data")
-
+        display = input("What do you want to display?")
+        if display == "age":
+            i = (input("what is your age?"))
+        else:
+            i = input(":")
+        
     elif action== 3:
         break
     else:
