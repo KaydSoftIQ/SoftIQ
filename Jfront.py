@@ -35,7 +35,7 @@ else:
 '''
 
 while True:
-    #Full stack - there is class missing in the turtle back-end, i need the class so i can call it to display. 
+    #Full stack - there is class missing in the turtle back-end,
     action = 0
     print("\n 1) To enter data. \n 2) To display data. \n 3) Exit")
     action = int(input("Enter a number: "))
