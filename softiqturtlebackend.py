@@ -1,3 +1,5 @@
+'''
+
 # Jacob's Notes -- Okay, now can we make it class based (OOP) and draw the bars to scale based on the data? An axis is also needed
 
 
@@ -54,6 +56,8 @@ for i in range(len(xs)):
 wn.exitonclick()
 
 '''
+
+'''
 import turtle
 
 def draw_chart(data):
@@ -88,3 +92,73 @@ def draw_chart(data):
 
 '''
 
+#test
+
+
+'''
+
+import turtle
+import csv 
+
+
+
+def read_data_from_csv(filename):
+	data = {}
+	with open(filename, 'r') as file:
+		reader = csv.DictReader(file)
+		for row in reader:
+			data[row['Category']] = int(row['Value'])
+	return data 
+def draw_chart(data):
+	max_value = max(data.values(), default=0)
+	chart_height = 300
+	chart_width = 400 
+	bar_width = chart_width / len(data) 
+	
+turtle.speed(1)
+    
+for category, value in data.items():
+        bar_height = (value / max_value) * chart_height
+        turtle.forward(bar_width)
+        turtle.left(90) 
+        turtle.forward(bar_height) 
+        turtle.left(90) 
+        turtle.forward(bar_width) 
+        turtle.left(90) 
+        turtle.forward(bar_height) 
+        turtle.left(90) 
+        turtle.penup() 
+        turtle.goto(turtle.xcor() + bar_width, 0) 
+        turtle.pendown() 
+        turtle.write(f'{category} - {value}', align='center') 
+        turtle.hideturtle() 
+        turtle.done() 
+		# Example usage: Read data from "data.csv" and draw the chart data = read_data_from_csv("data.csv") draw_chart(data)
+
+'''
+
+
+import turtle
+t=turtle.Turtle()
+
+width = (25)
+height = (50)
+
+def draw_chart():
+	t.forward(500)
+	t.home()
+	t.left(90)
+	t.forward(500)
+	
+def first_bar():
+	t.home()
+	t.forward(50)
+	t.left(90)
+	t.forward(height)
+	t.right(90)
+	t.forward(width)
+	t.right(90)
+	t.forward(height)
+	
+draw_chart()
+first_bar()
