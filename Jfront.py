@@ -35,6 +35,7 @@ else:
 '''
 
 while True:
+    #Full stack - there is class missing in the turtle back-end, i need the class so i can call it to display. 
     action = 0
     print("\n 1) To enter data. \n 2) To display data. \n 3) Exit")
     action = int(input("Enter a number: "))
@@ -47,6 +48,8 @@ while True:
         role = input("Role: ")
     
     elif action== 2:
+        # this is the action where the data should be displayed 
+        # Turtle shouldn't start before the action
         print("Display Data")
         display = input("What do you want to display?")
         if display == "age":
@@ -55,6 +58,7 @@ while True:
             i = input(":")
         
     elif action== 3:
+        # DON'T Edit this action
         break
     else:
         pass
