@@ -1,3 +1,6 @@
+# Jacob's Notes -- Okay, now can we make it class based (OOP) and draw the bars to scale based on the data? An axis is also needed
+
+
 # Python program to draw a turtle
 import turtle
 
