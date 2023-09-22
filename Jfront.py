@@ -56,6 +56,7 @@ while True:
             i = (input("what is your age?"))
         else:
             i = input(":")
+            
         
     elif action== 3:
         # DON'T Edit this action
