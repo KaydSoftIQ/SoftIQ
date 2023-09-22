@@ -1,4 +1,4 @@
-from softiqbackend import*
+from softiqbackend import *
 from softiqturtlebackend import *
 '''
 
@@ -46,16 +46,23 @@ while True:
         hair = input("Hair Colour: ")
         sex = input("Sex (Male/Female): ")
         role = input("Role: ")
+        
     
     elif action== 2:
         # this is the action where the data should be displayed 
         # Turtle shouldn't start before the action
         print("Display Data")
         display = input("What do you want to display?")
+        
+
+
         if display == "age":
             i = (input("what is your age?"))
         else:
             i = input(":")
+            
+        
+        
         
     elif action== 3:
         # DON'T Edit this action
