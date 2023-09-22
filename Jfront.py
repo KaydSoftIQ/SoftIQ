@@ -41,10 +41,6 @@ while True:
     action = int(input("Enter a number: "))
 
     if action == 1:
-<<<<<<< HEAD
-        print("Enter Data")
-    elif action == 2:
-=======
         name = input("Name: ")
         age = int(input("Age: "))
         hair = input("Hair Colour: ")
@@ -52,7 +48,6 @@ while True:
         role = input("Role: ")
     
     elif action== 2:
->>>>>>> 43ae9d3ef6ee70abd0a45c1f4821e215f87ac618
         # this is the action where the data should be displayed 
         # Turtle shouldn't start before the action
         print("Display Data")
