@@ -43,10 +43,13 @@ while True:
     if action == 1:
         print("Enter Data")
     elif action== 2:
+        # this is the action where the data should be displayed 
+        # Turtle shouldn't start before the action
         print("Display Data")
 
 
     elif action== 3:
+        # DON'T Edit this action
         break
     else:
         pass
